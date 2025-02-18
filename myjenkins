@@ -4,17 +4,20 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Build In Progres'
+                echo 'In Building Stage'
+                bat javac 'hello world.java'
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing In Progres'
+                echo 'In Testing Stage'
+                bat javac 'hello world.java'
             }
         }
-        stage('Deploy') {
+        stage('Run') {
             steps {
-                echo 'Deploying'
+                echo 'In Runing Stage'
+                bat javac 'hello world.java'
             }
         }
     }
