@@ -5,19 +5,19 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'In Building Stage'
-                bat javac 'hello world.java'
+                bat 'javac helloworld.java'
             }
         }
         stage('Test') {
             steps {
                 echo 'In Testing Stage'
-                bat javac 'hello world.java'
+                bat 'javac helloworld.java'
             }
         }
         stage('Run') {
             steps {
                 echo 'In Runing Stage'
-                bat javac 'hello world.java'
+                bat 'java helloworld'
             }
         }
     }
