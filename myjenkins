@@ -4,14 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'In Building Stage'
-                bat 'javac helloworld.java'
-            }
-        }
-        stage('Run') {
-            steps {
-                echo 'In Runing Stage'
-                bat 'java helloworld'
+                publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '', reportFiles: 'Sample.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])'
             }
         }
     }
